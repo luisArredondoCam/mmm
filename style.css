@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,600&display=swap');
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    background-image: url("./images/images.png");
+    animation-name: bodyImage;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes bodyImage{
+    0%{
+        background-position: 100px;
+    }
+    25%{background-position: 200px 500px;}
+    50%{background-position: 300px 200px;}
+    100%{background-position: 400px;}
+}
+section{
+    max-width: 32rem;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    background-color: #454545;
+    border-radius: 0.85rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: rgba(119, 2, 2, 0.56);
+}
+button,h1{
+    color: #e4e4e4;
+}
+h1{
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+button{
+    background-color: #ff5959e0;
+    display: block;
+    padding: 0.6rem 1rem;
+    width: 8em;
+    border: none;
+    border-radius: 0.8em;
+    cursor: pointer;
+    transition: 0.1s;
+    FONT-WEIGHT: 900;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+align-items: center;
+}
+#noChoice{
+    position: relative;
+}
+.modal-si__center{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    place-items: center;
+}
+.active{
+    display: grid;
+}
+.pars{
+    font-family: 1.5rem;
+    color: #ffffff;
+}
+@media (min-width:500px){
+ .buttons{
+    flex-direction: row;
+ }   
+}
